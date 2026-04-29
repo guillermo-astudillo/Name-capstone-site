@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAME | Digital Identity Repair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">NAME</div>
+      <div class="subhead">Digital identity repair for applicants and early-career users</div>
+    </div>
+    <div class="badge-row desktop-only">
+      <span class="badge blue">Massachusetts pilot</span>
+      <span class="badge green">Guided workflow</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-grid container">
+      <div>
+        <div class="pill">Clean up your searchable identity before it matters</div>
+        <h1>See what your name shows online. Decide what needs action. Leave with a plan.</h1>
+        <p class="hero-copy">
+          NAME helps students, applicants, and early-career professionals review the digital traces attached to their name, choose a realistic next step, and organize requests for correction, removal, de-indexing, broker opt-outs, or safer settings.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" data-step="1">Start your review</button>
+          <button class="btn secondary" data-step="2">View the identity map</button>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-value">6</div><div class="stat-label">Guided service areas</div></div>
+          <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Simple decisions</div></div>
+          <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">Portable action plan</div></div>
+        </div>
+      </div>
+
+      <div class="phone-shell">
+        <div class="phone-inner">
+          <div class="notch"></div>
+          <div class="flow-card">
+            <div class="flow-header">
+              <div>
+                <div class="eyebrow cyan">Current step</div>
+                <div id="current-flow" class="flow-title">Learn</div>
+              </div>
+              <span class="badge blue">Preview</span>
+            </div>
+            <div id="step-buttons" class="step-buttons"></div>
+            <div id="flow-description" class="flow-description"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-grid">
+    <aside class="panel side-panel">
+      <div class="panel-header">
+        <div>
+          <div class="eyebrow cyan">Start here</div>
+          <h2>Your contact details</h2>
+        </div>
+        <span class="badge green">Required</span>
+      </div>
+      <p class="muted">NAME starts with only the information needed to create and send your action plan. You can add more context later if you choose.</p>
+
+      <div class="field-group">
+        <label for="full-name">Full name</label>
+        <input id="full-name" placeholder="Your full legal or professional name" />
+      </div>
+      <div class="field-group">
+        <label for="email">Email address</label>
+        <input id="email" placeholder="name@example.com" />
+      </div>
+      <div class="field-group">
+        <label for="phone">Phone number</label>
+        <input id="phone" placeholder="Best number for follow-up" />
+      </div>
+      <div class="field-group">
+        <label for="residency">Pilot eligibility</label>
+        <select id="residency">
+          <option>Massachusetts resident</option>
+          <option>Student or applicant currently in Massachusetts</option>
+          <option>Outside Massachusetts</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="notes">Optional context</label>
+        <textarea id="notes" placeholder="Add anything you want NAME to know: an old profile, a wrong-person result, a broker listing, a link, or a concern before applications."></textarea>
+      </div>
+
+      <div class="privacy-note">
+        <div class="mini-label">Data collected</div>
+        <p>Name, email, phone, Massachusetts eligibility, and any optional context you choose to provide. The first version is designed around data minimization.</p>
+      </div>
+
+      <div class="section-spacer">
+        <div class="eyebrow cyan">Choose your situation</div>
+        <div id="scenario-buttons" class="scenario-list"></div>
+      </div>
+    </aside>
+
+    <section class="content-stack">
+      <section class="panel service-panel">
+        <div class="row between mobile-stack gap16">
+          <div>
+            <div class="eyebrow cyan">What NAME does</div>
+            <h3>A guided repair room for your public identity</h3>
+            <p class="muted maxw">NAME does not promise that every result can disappear. It helps you understand what is attached to your name, choose the right type of action, and keep a record of what you did next.</p>
+          </div>
+          <span class="badge amber">Plain-language service</span>
+        </div>
+        <div class="service-grid">
+          <div class="service-card"><div class="path-title">For applicants</div><p>Prepare before graduate school, jobs, fellowships, housing, or professional opportunities.</p></div>
+          <div class="service-card"><div class="path-title">For Massachusetts first</div><p>The pilot begins with Massachusetts users so legal guidance and referrals can stay clear and realistic.</p></div>
+          <div class="service-card"><div class="path-title">For ordinary users</div><p>No legal training required. NAME turns confusing privacy options into one step-by-step workflow.</p></div>
+        </div>
+      </section>
+
+      <div class="metrics-grid">
+        <div class="metric-card"><div class="metric-value">4</div><div class="metric-label">Example traces</div></div>
+        <div class="metric-card"><div class="metric-value">2</div><div class="metric-label">High-priority items</div></div>
+        <div class="metric-card"><div class="metric-value">1</div><div class="metric-label">Uncertain match</div></div>
+        <div class="metric-card"><div class="metric-value">5</div><div class="metric-label">Action pathways</div></div>
+      </div>
+
+      <section class="panel">
+        <div class="row between mobile-stack gap16">
+          <div>
+            <div class="eyebrow cyan">Identity map</div>
+            <h3>What appears around your name</h3>
+            <p class="muted maxw">Start by listing the traces you already found. NAME classifies each item by source, risk, confidence, and likely next step. This preview uses example traces.</p>
+          </div>
+          <div class="badge-row">
+            <span class="badge amber">Example traces</span>
+            <span class="badge blue">User-confirmed review</span>
+          </div>
+        </div>
+
+        <div class="identity-grid">
+          <div id="trace-list" class="trace-list"></div>
+
+          <div class="selected-panel">
+            <div class="row between start gap16">
+              <div>
+                <div class="eyebrow cyan">Selected trace</div>
+                <h4 id="selected-title"></h4>
+              </div>
+              <span id="selected-confidence" class="badge blue"></span>
+            </div>
+            <p id="selected-summary" class="selected-summary"></p>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <div class="mini-label">Source</div>
+                <div id="selected-source" class="mini-value"></div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-label">Suggested path</div>
+                <div id="selected-action" class="mini-value"></div>
+              </div>
+            </div>
+
+            <div class="section-spacer">
+              <div class="eyebrow cyan">Decision layer</div>
+              <p class="muted">Choose the goal for this trace. NAME uses simple decisions because not every privacy concern requires deletion.</p>
+              <div id="decision-buttons" class="decision-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="bottom-grid">
+        <section class="panel">
+          <div class="eyebrow cyan">Action pathways</div>
+          <h3>Choose the request that fits the problem</h3>
+          <div class="path-grid">
+            <div class="path-card"><div class="path-title">Removal request</div><p>Ask a source, broker, or platform to delete, suppress, or opt you out.</p></div>
+            <div class="path-card"><div class="path-title">Correction packet</div><p>Prepare evidence for inaccurate, outdated, or wrong-person information.</p></div>
+            <div class="path-card"><div class="path-title">De-indexing request</div><p>Reduce search visibility when the source page is hard to change.</p></div>
+            <div class="path-card"><div class="path-title">Preventive settings</div><p>Tighten profile visibility and reduce future exposure.</p></div>
+            <div class="path-card"><div class="path-title">Advisor handoff</div><p>Create a clean summary to share with a career adviser, school office, or legal clinic.</p></div>
+          </div>
+        </section>
+
+        <section class="action-plan">
+          <div class="row between start gap16">
+            <div>
+              <div class="eyebrow cyan-light">Action plan</div>
+              <h3>Your portable next steps</h3>
+            </div>
+            <span class="badge blue">Export preview</span>
+          </div>
+          <div class="action-box">
+            <div class="mini-label">Current objective</div>
+            <div class="plan-title" id="plan-objective">Prepare a cleaner digital identity before applications.</div>
+            <div class="mini-label top-gap">Selected trace</div>
+            <div id="plan-trace" class="plan-text"></div>
+            <div class="mini-label top-gap">Decision</div>
+            <div id="plan-decision" class="plan-text"></div>
+            <div id="plan-steps" class="plan-steps"></div>
+            <div class="hero-actions top-gap">
+              <button class="btn light">Export one-page plan</button>
+              <button class="btn secondary">Share with adviser</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="eyebrow cyan">Cost, effort, and boundaries</div>
+        <h3>What using NAME should feel like</h3>
+        <div class="service-grid four">
+          <div class="service-card"><div class="path-title">Financial cost</div><p>The pilot is designed to be free or low-cost for users. Paid legal help may still be needed for complex cases.</p></div>
+          <div class="service-card"><div class="path-title">Time cost</div><p>Most users should leave the first session with a map and one action plan, rather than a dozen open browser tabs.</p></div>
+          <div class="service-card"><div class="path-title">Emotional cost</div><p>The interface uses calm language, stopping points, and limits so the process does not turn into panic-searching.</p></div>
+          <div class="service-card"><div class="path-title">Legal limits</div><p>Privacy law is complex. NAME begins with Massachusetts users and explains when legal advice may be needed.</p></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
